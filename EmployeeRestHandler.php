@@ -1,6 +1,6 @@
 <?php
 require_once("SimpleRest.php");
-require_once("Mobile.php");
+require_once("Employee.php");
 		
 class MobileRestHandler extends SimpleRest {
 
@@ -18,7 +18,7 @@ class MobileRestHandler extends SimpleRest {
 
 		$requestContentType = $_SERVER['HTTP_ACCEPT'];
 		$this ->setHttpHeaders($requestContentType, $statusCode);
-				
+		echo "TEST successful";		
 		if(strpos($requestContentType,'application/json') !== false){
 			//$response = $this->encodeJson($rawData);
 			//echo $response;
