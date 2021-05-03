@@ -19,10 +19,10 @@ class EmployeeRestHandler extends SimpleRest {
 
 		$requestContentType = $_SERVER['HTTP_ACCEPT'];
 		$this ->setHttpHeaders($requestContentType, $statusCode);
-		
+		echo $requestContentType;
 		if(strpos($requestContentType,'application/json') !== false){
 			$response = $this->encodeJson($rawData);
-			echo "JSON JSON JSON";
+			//echo "JSON JSON JSON";
 			echo $response;
 			//echo $rawData;
 		} else if(strpos($requestContentType,'text/html') !== false){
@@ -32,7 +32,7 @@ class EmployeeRestHandler extends SimpleRest {
 			$response = $this->encodeXml($rawData);
 			echo $response;
 		} else {
-			echo "RAW DATA RAW DATA";
+			//echo "RAW DATA RAW DATA";
 			echo $rawData;
 		}
 	}
