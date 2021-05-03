@@ -12,8 +12,8 @@ switch($view){
 
 	case "all":
 		// to handle REST Url /mobile/list/
-		$mobileRestHandler = new MobileRestHandler();
-		$mobileRestHandler->getAllMobiles();
+		$employeeRestHandler = new EmployeeRestHandler();
+		$employeeRestHandler->getAllEmployees();
 		break;
 		
 	/*case "single":

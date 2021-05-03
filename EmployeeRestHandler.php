@@ -4,14 +4,14 @@ require_once("Mobile.php");
 		
 class MobileRestHandler extends SimpleRest {
 
-	function getAllMobiles() {	
+	function getAllEmployees() {	
 
-		$mobile = new Mobile();
-		$rawData = $mobile->getAllMobile();
+		$employee = new Employee();
+		$rawData = $employee->getAlEmployees();
 
 		if(empty($rawData)) {
 			$statusCode = 404;
-			$rawData = array('error' => 'No mobiles found!');		
+			$rawData = array('error' => 'No employees found!');		
 		} else {
 			$statusCode = 200;
 		}
