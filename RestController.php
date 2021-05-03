@@ -12,7 +12,7 @@ switch($view){
 
 	case "all":
 		// to handle REST Url /mobile/list/
-		$employeeRestHandler = new EmployeeRestHandler();
+		$employeeRestHandler = new EmployeeRestHandler();								   
 		$employeeRestHandler->getAllEmployees();
 		break;
 		
