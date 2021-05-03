@@ -44,7 +44,8 @@ class EmployeeRestHandler extends SimpleRest {
 	
 	public function encodeJson($responseData) {
 		$jsonResponse = json_encode($responseData);
-		return $jsonResponse;		
+		//return $jsonResponse;		
+		return $responseData;
 	}
 	
 	public function encodeXml($responseData) {
