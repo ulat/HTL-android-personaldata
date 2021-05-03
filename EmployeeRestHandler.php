@@ -20,8 +20,9 @@ class MobileRestHandler extends SimpleRest {
 		$this ->setHttpHeaders($requestContentType, $statusCode);
 				
 		if(strpos($requestContentType,'application/json') !== false){
-			$response = $this->encodeJson($rawData);
-			echo $response;
+			//$response = $this->encodeJson($rawData);
+			//echo $response;
+			echo $rawData;
 		} else if(strpos($requestContentType,'text/html') !== false){
 			$response = $this->encodeHtml($rawData);
 			echo $response;
