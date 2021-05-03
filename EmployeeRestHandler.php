@@ -16,25 +16,8 @@ class EmployeeRestHandler extends SimpleRest {
 		} else {
 			$statusCode = 200;
 		}
-
-		$requestContentType = split(',', getallheaders()['Accept'])[0];
-		$this ->setHttpHeaders($requestContentType, $statusCode);
-		echo $requestContentType;
-		if(strpos($requestContentType,'application/json') !== false){
-			$response = $this->encodeJson($rawData);
-			//echo "JSON JSON JSON";
-			echo $response;
-			//echo $rawData;
-		} else if(strpos($requestContentType,'text/html') !== false){
-			$response = $this->encodeHtml($rawData);
-			echo $response;
-		} else if(strpos($requestContentType,'application/xml') !== false){
-			$response = $this->encodeXml($rawData);
-			echo $response;
-		} else {
-			//echo "RAW DATA RAW DATA";
-			echo $rawData;
-		}
+		echo $rawData;
+		
 	}
 	
 	public function encodeHtml($responseData) {
