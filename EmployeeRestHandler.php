@@ -20,9 +20,9 @@ class EmployeeRestHandler extends SimpleRest {
 		$this ->setHttpHeaders($requestContentType, $statusCode);
 		
 		if(strpos($requestContentType,'application/json') !== false){
-			//$response = $this->encodeJson($rawData);
-			//echo $response;
-			echo $rawData;
+			$response = $this->encodeJson($rawData);
+			echo $response;
+			//echo $rawData;
 		} else if(strpos($requestContentType,'text/html') !== false){
 			$response = $this->encodeHtml($rawData);
 			echo $response;
