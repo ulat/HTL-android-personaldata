@@ -32,6 +32,7 @@ class EmployeeRestHandler extends SimpleRest {
 			$response = $this->encodeXml($rawData);
 			echo $response;
 		} else {
+			echo "RAW DATA RAW DATA";
 			echo $rawData;
 		}
 	}
