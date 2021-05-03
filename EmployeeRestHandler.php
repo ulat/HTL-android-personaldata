@@ -22,6 +22,7 @@ class EmployeeRestHandler extends SimpleRest {
 		
 		if(strpos($requestContentType,'application/json') !== false){
 			$response = $this->encodeJson($rawData);
+			echo "JSON JSON JSON";
 			echo $response;
 			//echo $rawData;
 		} else if(strpos($requestContentType,'text/html') !== false){
@@ -47,9 +48,9 @@ class EmployeeRestHandler extends SimpleRest {
 	}
 	
 	public function encodeJson($responseData) {
-		//$jsonResponse = json_encode($responseData);
-		//return $jsonResponse;		
-		return $responseData;
+		$jsonResponse = json_encode($responseData);
+		return $jsonResponse;		
+		//return $responseData;
 	}
 	
 	public function encodeXml($responseData) {
