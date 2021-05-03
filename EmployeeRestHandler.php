@@ -33,18 +33,18 @@ class EmployeeRestHandler extends SimpleRest {
 	}
 	
 	public function encodeHtml($responseData) {
-	
+		/*
 		$htmlResponse = "<table border='1'>";
 		foreach($responseData as $key=>$value) {
     			$htmlResponse .= "<tr><td>". $key. "</td><td>". $value. "</td></tr>";
 		}
 		$htmlResponse .= "</table>";
-		//return $htmlResponse;		
+		return $htmlResponse;		*/
 		return $responseData;
 	}
 	
 	public function encodeJson($responseData) {
-		$jsonResponse = json_encode($responseData);
+		//$jsonResponse = json_encode($responseData);
 		//return $jsonResponse;		
 		return $responseData;
 	}
