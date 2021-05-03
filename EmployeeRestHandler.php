@@ -18,7 +18,7 @@ class EmployeeRestHandler extends SimpleRest {
 		}
 
 		$requestContentType = $_SERVER['HTTP_ACCEPT'];
-		$this ->setHttpHeaders($requestContentType, $statusCode);
+		//$this ->setHttpHeaders($requestContentType, $statusCode);
 		
 		if(strpos($requestContentType,'application/json') !== false){
 			$response = $this->encodeJson($rawData);
