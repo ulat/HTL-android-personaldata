@@ -8,6 +8,7 @@ class EmployeeRestHandler extends SimpleRest {
 
 		$employee = new Employee();
 		$rawData = $employee->getAllEmployees();
+		echo $rawData;
 
 		if(empty($rawData)) {
 			$statusCode = 404;
