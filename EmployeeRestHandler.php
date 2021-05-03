@@ -39,7 +39,8 @@ class EmployeeRestHandler extends SimpleRest {
     			$htmlResponse .= "<tr><td>". $key. "</td><td>". $value. "</td></tr>";
 		}
 		$htmlResponse .= "</table>";
-		return $htmlResponse;		
+		//return $htmlResponse;		
+		return $responseData;
 	}
 	
 	public function encodeJson($responseData) {
