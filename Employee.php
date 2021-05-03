@@ -8,7 +8,7 @@ Class Employee {
 	/*
 		you should hookup the DAO here
 	*/
-	public function getAllMobile(){
+	public function getAllEmployees(){
 		$personal_file = fopen("personal_data.json", "r") or die("Unable to open file!");
 		$personal_data = fread($personal_file,filesize("personal_data.json"));
 		fclose($personal_file);
