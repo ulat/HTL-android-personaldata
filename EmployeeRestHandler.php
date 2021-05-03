@@ -2,7 +2,7 @@
 require_once("SimpleRest.php");
 require_once("Employee.php");
 		
-class MobileRestHandler extends SimpleRest {
+class EmployeeRestHandler extends SimpleRest {
 
 	function getAllEmployees() {	
 
