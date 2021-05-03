@@ -17,7 +17,7 @@ class EmployeeRestHandler extends SimpleRest {
 			$statusCode = 200;
 		}
 
-		$requestContentType = get_headers('http://127.0.0.1', 1)["Content-Type"];
+		$requestContentType = split(',', getallheaders()['Accept'])[0];
 		$this ->setHttpHeaders($requestContentType, $statusCode);
 		echo $requestContentType;
 		if(strpos($requestContentType,'application/json') !== false){
